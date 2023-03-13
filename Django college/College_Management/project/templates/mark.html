@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leave application form</title>
+    <link rel="stylesheet" href="../static/css/reg.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+       <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    
+    
+    
+
+    <section class="regis">
+        <div class="container-fluid">
+            <h1 align="center" class="pt-5">Mark List</h1>
+    
+            <div class="row">
+                <div class="col Course image">
+                    <div class="table d-flex align-items-center justify-content-center">
+                        <form method="post" action="{% url 'publish' %}" class="text-center mt-5">
+                            {% csrf_token %}
+                            <div class="" style="display: flex; justify-content: center;">
+                                <div>
+                                <label class="me-5 pe-3" style="color: rgb(228, 121, 45);">Department</label>
+                                <input type="text" class="me-5 pe-3" name="department"><br><br>
+                                <label class="me-5 pe-3" style="color: rgb(228, 121, 45);">Subject</label>
+                                <input type="text" class="me-3 pe-3" name="subject"><br><br>
+                                <label class="me-5 pe-3" style="color: rgb(228, 121, 45);">Total Mark</label>
+                                <input type="text" class="me-5 pe-3" name="total"><br><br>
+                                <label class="me-5 pe-3" style="color: rgb(228, 121, 45);">Mark</label>
+                                <input type="text" class="me-2 pe-3" name="mymark"><br><br><br>
+                                <input type="submit" class="btn btn-success" value="Submit">
+                                
+                            </div>
+                            </div>
+                            </form>
+                    </div>
+    
+                </div>
+    
+            </div>
+        </div>
+
+    </section>
+    
+   
+
+  
+    
+    
+</body>
+</html>

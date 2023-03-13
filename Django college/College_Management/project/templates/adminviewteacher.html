@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hod</title>
+    <link rel="stylesheet" href="../static/css/other.css">
+    <link rel="stylesheet" href="../static/css/other.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    
+</head>
+<body class="bg-light">
+    
+    
+   
+      
+    
+      
+      <!-- techer section -->
+      <section class="teacher d-flex justify-content-center align-items-center h-100 bg-light" id="teacher">
+        <div class="container-fluid">
+
+            <div class="container mt-3 mb-5">
+                <div class="text1">
+                    <h1 class="text-center text-primary" style="letter-spacing: 5px;">Teacher</h1>
+                    
+                </div>
+            </div>
+            <div class="row">
+                {% for i in teacherlist %}
+                {% if i.status == "0" %}
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card position-relative mt-5">
+                        <div class="imagebox position-absolute">
+                            <!-- <img src="/media/{{i.hod_img}}" alt=""> -->
+
+                        </div>
+                        <div class="content position-absolute d-flex justify-content-center">
+                            <div class="details">
+                                <h2>{{i.fullname}}<br><span>Teacher of {{i.department}}</span></h2>
+                                <div>
+                                    <p>{{i.email}}</p>
+                                    <p>{{i.phoneno}}</p>
+                                    <p>{{i.qualification}}</p>
+                                </div>
+                                <div class="data d-flex">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                                <div>
+                                    <a href="{% url 'admindeleteteacher' i.id %}"><button class="btn btn-outline-danger mt-4" type="submit">Reject</button></a>
+                                    <a href="{% url 'adminapproveteacher' i.id %}"><button class="btn btn-outline-danger mt-4" type="submit">Approve</button></a>
+                                </div>
+                               
+                                
+                                
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div> 
+                {% endif %}
+                {% endfor %}    
+            </div>
+        </div>
+      </section>
+
+      <!-- End techer section -->
+    
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    
+</body>
+</html>
